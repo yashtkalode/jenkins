@@ -25,7 +25,7 @@ def train():
     # Load, read and normalize training data
     training = "./train.csv"
     data_train = pd.read_csv(training)
-
+    print(data_train.head())
     y_train = data_train['# Letter'].values
     X_train = data_train.drop(data_train.loc[:, 'Line':'# Letter'].columns, axis = 1)
     
